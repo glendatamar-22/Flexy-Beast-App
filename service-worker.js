@@ -1,4 +1,4 @@
-const CACHE_NAME = 'flexy-beast-v7';
+const CACHE_NAME = 'flexy-beast-v8';
 const urlsToCache = [
     './',
     './index.html',

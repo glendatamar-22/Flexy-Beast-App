@@ -86,27 +86,12 @@ const stretchesData = {
 function showHome() {
     document.getElementById('home-page').classList.add('active');
     document.getElementById('category-page').classList.remove('active');
-    
-    // Add class to body to prevent scrolling on mobile
-    document.body.classList.add('home-page-active');
-    document.body.classList.remove('category-page-active');
-    
-    // Scroll to top
-    window.scrollTo(0, 0);
 }
 
 // Show category page
 function showCategory(category) {
     const categoryData = stretchesData[category];
     if (!categoryData) return;
-
-    // Remove home page class first to allow page transition
-    document.body.classList.remove('home-page-active');
-    document.body.classList.add('category-page-active');
-
-    // Hide home page, show category page
-    document.getElementById('home-page').classList.remove('active');
-    document.getElementById('category-page').classList.add('active');
 
     // Update title
     document.getElementById('category-title').textContent = categoryData.title;
@@ -128,17 +113,16 @@ function showCategory(category) {
         container.appendChild(stretchCard);
     });
 
+    // Show category page, hide home page
+    document.getElementById('home-page').classList.remove('active');
+    document.getElementById('category-page').classList.add('active');
+
     // Scroll to top
     window.scrollTo(0, 0);
 }
 
 // Initialize event listeners
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize body class for home page (prevent scrolling on mobile)
-    if (document.getElementById('home-page').classList.contains('active')) {
-        document.body.classList.add('home-page-active');
-    }
-    
     // Add click handlers to category buttons
     const categoryButtons = document.querySelectorAll('.category-btn');
     categoryButtons.forEach(button => {
