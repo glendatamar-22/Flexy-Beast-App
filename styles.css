@@ -30,7 +30,9 @@ body {
 }
 
 .page.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Home Page Styles */
@@ -191,6 +193,59 @@ body {
         min-height: calc(100vh - 60px);
     }
     
+    /* Home page - vertically center content on mobile */
+    #home-page {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        position: relative;
+    }
+    
+    #home-page .container {
+        justify-content: center;
+        flex: 1;
+        padding: 20px 15px;
+        min-height: 0;
+    }
+    
+    #home-page .main-title {
+        font-size: 34px;
+        margin-bottom: 12px;
+    }
+    
+    #home-page .subtitle {
+        font-size: 18px;
+        margin-bottom: 24px;
+    }
+    
+    #home-page .button-group {
+        width: 100%;
+        max-width: 100%;
+        gap: 14px;
+    }
+    
+    #home-page .category-btn {
+        width: 80%;
+        font-size: 20px;
+        padding: 16px 12px;
+        min-height: 50px;
+    }
+    
+    #home-page .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #E3F2FD;
+        padding: 15px 0;
+        margin-top: 0;
+        font-size: 12px;
+        z-index: 10;
+        text-align: center;
+        color: #757575;
+    }
+    
+    /* Category page styles */
     .main-title {
         font-size: 40px;
     }
@@ -245,10 +300,6 @@ body {
     }
     
     #category-page .container {
-        padding-bottom: 80px;
-    }
-    
-    #home-page .container {
         padding-bottom: 80px;
     }
 }
