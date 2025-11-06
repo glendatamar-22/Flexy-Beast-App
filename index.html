@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Flexy Beast - Post-gym stretching made simple">
+    <title>Flexy Beast</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <!-- Home Page -->
+    <div id="home-page" class="page active">
+        <div class="container">
+            <h1 class="main-title">Flexy Beast</h1>
+            <p class="subtitle">Pick a body part to stretch after the gym</p>
+            
+            <div class="button-group">
+                <button class="category-btn" data-category="arms">Arms</button>
+                <button class="category-btn" data-category="legs">Legs</button>
+                <button class="category-btn" data-category="back">Back</button>
+                <button class="category-btn" data-category="full-body">Full Body</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category Pages -->
+    <div id="category-page" class="page">
+        <div class="container">
+            <button class="back-btn" onclick="showHome()">← Back to Home</button>
+            <h2 id="category-title" class="category-title"></h2>
+            
+            <div id="stretches-container" class="stretches-container">
+                <!-- Stretches will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        // Register service worker for offline functionality
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js')
+                    .catch(err => console.log('Service worker registration failed'));
+            });
+        }
+    </script>
+</body>
+</html>
+

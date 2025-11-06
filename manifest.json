@@ -1,0 +1,12 @@
+{
+    "name": "Flexy Beast",
+    "short_name": "Flexy Beast",
+    "description": "Post-gym stretching made simple",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#E3F2FD",
+    "theme_color": "#1565C0",
+    "orientation": "portrait",
+    "icons": []
+}
+
