@@ -30,9 +30,16 @@ body {
 }
 
 .page.active {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    display: block;
+}
+
+/* Desktop: home page uses flex */
+@media (min-width: 481px) {
+    #home-page.active {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
 }
 
 /* Home Page Styles */
@@ -188,29 +195,12 @@ body {
         padding-bottom: 60px;
     }
     
-    /* Prevent scrolling on home page only */
-    body.home-page-active {
-        overflow: hidden;
-        height: 100vh;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        left: 0;
-    }
-    
-    /* Allow scrolling on category pages */
-    body.category-page-active {
-        overflow: auto;
-        position: relative;
-        height: auto;
-    }
-    
     .container {
         padding: 20px 15px;
         min-height: calc(100vh - 60px);
     }
     
-    /* Home page - vertically center content on mobile */
+    /* Home page - vertically center content on mobile, prevent scrolling */
     #home-page {
         display: flex;
         flex-direction: column;
@@ -220,11 +210,41 @@ body {
         overflow: hidden;
     }
     
+    #home-page.active {
+        display: flex !important;
+    }
+    
     #home-page .container {
         justify-content: center;
         flex: 1;
         padding: 100px 15px 60px 15px;
         min-height: 0;
+        max-height: 100vh;
+        overflow: hidden;
+    }
+    
+    /* Prevent body scrolling when home page is active */
+    body.home-page-active {
+        overflow: hidden;
+        height: 100vh;
+        position: relative;
+    }
+    
+    /* Allow scrolling on category pages */
+    body.category-page-active {
+        overflow: auto;
+        height: auto;
+        position: relative;
+    }
+    
+    /* Category page - allow scrolling */
+    #category-page {
+        position: relative;
+        min-height: 100vh;
+    }
+    
+    #category-page.active {
+        display: block;
     }
     
     #home-page .main-title {

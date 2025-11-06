@@ -100,6 +100,14 @@ function showCategory(category) {
     const categoryData = stretchesData[category];
     if (!categoryData) return;
 
+    // Remove home page class first to allow page transition
+    document.body.classList.remove('home-page-active');
+    document.body.classList.add('category-page-active');
+
+    // Hide home page, show category page
+    document.getElementById('home-page').classList.remove('active');
+    document.getElementById('category-page').classList.add('active');
+
     // Update title
     document.getElementById('category-title').textContent = categoryData.title;
 
@@ -119,14 +127,6 @@ function showCategory(category) {
         
         container.appendChild(stretchCard);
     });
-
-    // Show category page, hide home page
-    document.getElementById('home-page').classList.remove('active');
-    document.getElementById('category-page').classList.add('active');
-    
-    // Remove home page class and add category page class to allow scrolling
-    document.body.classList.remove('home-page-active');
-    document.body.classList.add('category-page-active');
 
     // Scroll to top
     window.scrollTo(0, 0);
