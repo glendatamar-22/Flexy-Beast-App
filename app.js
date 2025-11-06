@@ -86,6 +86,13 @@ const stretchesData = {
 function showHome() {
     document.getElementById('home-page').classList.add('active');
     document.getElementById('category-page').classList.remove('active');
+    
+    // Add class to body to prevent scrolling on mobile
+    document.body.classList.add('home-page-active');
+    document.body.classList.remove('category-page-active');
+    
+    // Scroll to top
+    window.scrollTo(0, 0);
 }
 
 // Show category page
@@ -116,6 +123,10 @@ function showCategory(category) {
     // Show category page, hide home page
     document.getElementById('home-page').classList.remove('active');
     document.getElementById('category-page').classList.add('active');
+    
+    // Remove home page class and add category page class to allow scrolling
+    document.body.classList.remove('home-page-active');
+    document.body.classList.add('category-page-active');
 
     // Scroll to top
     window.scrollTo(0, 0);
@@ -123,6 +134,11 @@ function showCategory(category) {
 
 // Initialize event listeners
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize body class for home page (prevent scrolling on mobile)
+    if (document.getElementById('home-page').classList.contains('active')) {
+        document.body.classList.add('home-page-active');
+    }
+    
     // Add click handlers to category buttons
     const categoryButtons = document.querySelectorAll('.category-btn');
     categoryButtons.forEach(button => {

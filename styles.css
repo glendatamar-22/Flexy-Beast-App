@@ -188,6 +188,23 @@ body {
         padding-bottom: 60px;
     }
     
+    /* Prevent scrolling on home page only */
+    body.home-page-active {
+        overflow: hidden;
+        height: 100vh;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    
+    /* Allow scrolling on category pages */
+    body.category-page-active {
+        overflow: auto;
+        position: relative;
+        height: auto;
+    }
+    
     .container {
         padding: 20px 15px;
         min-height: calc(100vh - 60px);
@@ -198,7 +215,9 @@ body {
         display: flex;
         flex-direction: column;
         min-height: 100vh;
+        max-height: 100vh;
         position: relative;
+        overflow: hidden;
     }
     
     #home-page .container {
