@@ -204,13 +204,14 @@ body {
     #home-page .container {
         justify-content: center;
         flex: 1;
-        padding: 20px 15px;
+        padding: 100px 15px 60px 15px;
         min-height: 0;
     }
     
     #home-page .main-title {
         font-size: 34px;
         margin-bottom: 12px;
+        margin-top: 0;
     }
     
     #home-page .subtitle {
@@ -222,6 +223,7 @@ body {
         width: 100%;
         max-width: 100%;
         gap: 14px;
+        margin-bottom: 0;
     }
     
     #home-page .category-btn {
