@@ -25,17 +25,17 @@ const stretchesData = {
         stretches: [
             {
                 name: 'Quad Stretch',
-                image: 'https://shopyogastrong.com/cdn/shop/articles/yoga-strong-blog_c2000aa5-4ba0-4648-bb33-15e3989f9936_1950x.jpg?v=1721426042',
+                image: 'https://www.verywellfit.com/thmb/ZhebQCbptSAeqWEms7TEzve85dY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Verywell-30-2696366-StandingStretch-2106-5993552eb501e800127d38d3.jpg',
                 description: 'Stand on one leg, pull heel toward glutes. Hold 30 seconds each leg.'
             },
             {
                 name: 'Hamstring Stretch',
-                image: 'https://shopyogastrong.com/cdn/shop/articles/yoga-strong-blog_c2000aa5-4ba0-4648-bb33-15e3989f9936_1950x.jpg?v=1721426042',
+                image: 'https://barbend.com/wp-content/uploads/2023/07/hamstring-stretch-barbend.com_.jpg',
                 description: 'Sit with one leg extended, lean forward gently. Hold 30 seconds each leg.'
             },
             {
                 name: 'Calf Stretch',
-                image: 'https://shopyogastrong.com/cdn/shop/articles/yoga-strong-blog_c2000aa5-4ba0-4648-bb33-15e3989f9936_1950x.jpg?v=1721426042',
+                image: 'https://goodexerciseguide.com/wp-content/uploads/2013/04/calfstretch-1.jpg',
                 description: 'Step one foot back, press heel down. Hold 30 seconds each leg.'
             }
         ]
@@ -45,17 +45,17 @@ const stretchesData = {
         stretches: [
             {
                 name: 'Cat-Cow Stretch',
-                image: 'https://shopyogastrong.com/cdn/shop/articles/yoga-strong-blog_c2000aa5-4ba0-4648-bb33-15e3989f9936_1950x.jpg?v=1721426042',
+                image: 'https://static.vecteezy.com/system/resources/previews/018/862/577/non_2x/man-doing-yoga-cat-cow-pose-stretch-exercise-flat-illustration-isolated-on-white-background-vector.jpg',
                 description: 'On hands and knees, arch and round your back slowly. Repeat 10 times.'
             },
             {
                 name: 'Spinal Twist',
-                image: 'https://shopyogastrong.com/cdn/shop/articles/yoga-strong-blog_c2000aa5-4ba0-4648-bb33-15e3989f9936_1950x.jpg?v=1721426042',
+                image: 'https://www.yogabasics.com/yogabasics2025/wp-content/uploads/2013/11/KneedDnTwist_9828.jpg',
                 description: 'Lie on back, drop knees to one side. Hold 30 seconds each side.'
             },
             {
                 name: 'Child\'s Pose',
-                image: 'https://shopyogastrong.com/cdn/shop/articles/yoga-strong-blog_c2000aa5-4ba0-4648-bb33-15e3989f9936_1950x.jpg?v=1721426042',
+                image: 'https://cdn.yogajournal.com/wp-content/uploads/2021/10/Childs-Pose_Andrew-Clark_1.jpg',
                 description: 'Kneel and sit back on heels, reach arms forward. Hold 30 seconds.'
             }
         ]
@@ -64,19 +64,19 @@ const stretchesData = {
         title: 'Full Body Stretches',
         stretches: [
             {
-                name: 'Standing Forward Fold',
-                image: 'https://shopyogastrong.com/cdn/shop/articles/yoga-strong-blog_c2000aa5-4ba0-4648-bb33-15e3989f9936_1950x.jpg?v=1721426042',
-                description: 'Stand tall, fold forward and let arms hang. Hold 30 seconds.'
+                name: 'Side Lunge Stretch',
+                image: 'https://media.hearstapps.com/loop/lunge-side-left-edited-1599484619.mp4/poster.jpg',
+                description: 'Step wide to one side, bend that knee, keep other leg straight. Hold 30 seconds each side.'
             },
             {
-                name: 'Sun Salutation',
-                image: 'https://shopyogastrong.com/cdn/shop/articles/yoga-strong-blog_c2000aa5-4ba0-4648-bb33-15e3989f9936_1950x.jpg?v=1721426042',
-                description: 'Flow through: reach up, fold forward, plank, upward dog, downward dog. Repeat 3 times.'
+                name: 'Lunge Stretch',
+                image: 'https://www.verywellfit.com/thmb/2M77NtV1A9m_tN9QupDJpGm_dgE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/About-8-2911936-Low-Lunge-Kneel-Hamstring-Stretch01-131-12eb2bbe1c5c462e80313c7de44edd2e.jpg',
+                description: 'Step forward into lunge position, lower back knee toward ground. Hold 30 seconds each side.'
             },
             {
-                name: 'Supine Twist',
-                image: 'https://shopyogastrong.com/cdn/shop/articles/yoga-strong-blog_c2000aa5-4ba0-4648-bb33-15e3989f9936_1950x.jpg?v=1721426042',
-                description: 'Lie on back, hug knees, twist to one side. Hold 30 seconds each side.'
+                name: 'Elbow-to-Instep Lunge',
+                image: 'https://static01.nyt.com/images/2014/10/23/health/well_advanced1/well_advanced1-blog480-v2.jpg',
+                description: 'Step forward into lunge, place hand on ground, bring elbow down toward front foot. 3 times each side.'
             }
         ]
     }
