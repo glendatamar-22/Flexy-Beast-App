@@ -10,12 +10,19 @@ body {
     color: #212121;
     line-height: 1.6;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
     max-width: 600px;
     margin: 0 auto;
     padding: 30px 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
 }
 
 .page {
@@ -46,56 +53,70 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: center;
+    width: 100%;
+    max-width: 480px;
 }
 
 .category-btn {
-    width: 100%;
-    padding: 24px 20px;
-    font-size: 28px;
+    width: 80%;
+    max-width: 480px;
+    padding: 19px 16px;
+    font-size: 22px;
     font-weight: 600;
     background-color: #FFFFFF;
     color: #1565C0;
     border: 3px solid #1565C0;
-    border-radius: 12px;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.category-btn:hover,
-.category-btn:active {
-    background-color: #1565C0;
-    color: #FFFFFF;
+.category-btn:hover {
+    background-color: #E3F2FD;
+    color: #1565C0;
+    border-color: #1565C0;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .category-btn:active {
+    background-color: #BBDEFB;
     transform: translateY(0);
 }
 
 /* Category Page Styles */
 .back-btn {
-    width: 100%;
-    padding: 20px;
-    font-size: 24px;
+    width: 80%;
+    max-width: 480px;
+    padding: 16px;
+    font-size: 20px;
     font-weight: 600;
     background-color: #FFFFFF;
     color: #1565C0;
     border: 3px solid #1565C0;
-    border-radius: 12px;
+    border-radius: 8px;
     cursor: pointer;
     margin-bottom: 30px;
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    align-self: center;
 }
 
-.back-btn:hover,
-.back-btn:active {
-    background-color: #1565C0;
-    color: #FFFFFF;
+.back-btn:hover {
+    background-color: #E3F2FD;
+    color: #1565C0;
+    border-color: #1565C0;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.back-btn:active {
+    background-color: #BBDEFB;
+    transform: translateY(0);
 }
 
 .category-title {
@@ -110,6 +131,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    width: 100%;
+    align-items: center;
 }
 
 .stretch-card {
@@ -117,6 +140,9 @@ body {
     border-radius: 12px;
     padding: 25px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
 }
 
 .stretch-title {
@@ -139,10 +165,32 @@ body {
     font-size: 22px;
     color: #424242;
     line-height: 1.8;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    color: #757575;
+    font-size: 14px;
+    margin-top: 40px;
+    padding: 20px 0;
+    width: 100%;
 }
 
 /* Mobile Responsive */
 @media (max-width: 480px) {
+    body {
+        min-height: 100vh;
+        position: relative;
+        padding-bottom: 60px;
+    }
+    
+    .container {
+        padding: 20px 15px;
+        min-height: calc(100vh - 60px);
+    }
+    
     .main-title {
         font-size: 40px;
     }
@@ -151,9 +199,23 @@ body {
         font-size: 20px;
     }
     
+    .button-group {
+        width: 100%;
+        max-width: 100%;
+    }
+    
     .category-btn {
-        font-size: 24px;
-        padding: 20px;
+        width: 80%;
+        font-size: 20px;
+        padding: 16px 12px;
+        min-height: 50px;
+    }
+    
+    .back-btn {
+        width: 80%;
+        font-size: 18px;
+        padding: 14px;
+        min-height: 50px;
     }
     
     .category-title {
@@ -162,14 +224,32 @@ body {
     
     .stretch-title {
         font-size: 28px;
+        text-align: center;
     }
     
     .stretch-description {
         font-size: 20px;
+        text-align: center;
     }
     
-    .container {
-        padding: 20px 15px;
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #E3F2FD;
+        padding: 15px 0;
+        margin-top: 0;
+        font-size: 12px;
+        z-index: 10;
+    }
+    
+    #category-page .container {
+        padding-bottom: 80px;
+    }
+    
+    #home-page .container {
+        padding-bottom: 80px;
     }
 }
 
@@ -177,7 +257,18 @@ body {
 @media (hover: none) and (pointer: coarse) {
     .category-btn,
     .back-btn {
-        min-height: 60px;
+        min-height: 50px;
     }
+}
+
+/* Ensure all text is centered */
+.main-title,
+.subtitle,
+.category-title {
+    text-align: center;
+}
+
+.stretch-card {
+    text-align: center;
 }
 
